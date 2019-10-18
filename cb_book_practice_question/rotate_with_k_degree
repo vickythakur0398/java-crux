@@ -1,0 +1,25 @@
+package array;
+import java.util.*;
+
+public class rotate_by_k_degree {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [] arr = {10, 20, 30, 40 , 50}; 
+		Scanner jk = new Scanner(System.in);
+		int rot = jk.nextInt();
+		rotate(arr, rot);
+		for(int i : arr) {
+			System.out.println(i);
+		}
+		
+	}public static void rotate(int[] arr, int rot) {
+		for(int r =0; r<= rot; r++) {
+		int temp = arr[arr.length-1];
+		for(int i =arr.length-1; i>=1; i--) {
+			arr[i] = arr[i-1];
+		}
+		arr[0] = temp;
+		}
+	}
+}
