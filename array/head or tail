@@ -24,3 +24,39 @@ public class head_or_tail {
 	}
 
 }
+/*
+o/p
+ tail   tail   tail   tail   tail  
+ head  tail   tail   tail   tail  
+ tail   head  tail   tail   tail  
+ head  head  tail   tail   tail  
+ tail   tail   head  tail   tail  
+ head  tail   head  tail   tail  
+ tail   head  head  tail   tail  
+ head  head  head  tail   tail  
+ tail   tail   tail   head  tail  
+ head  tail   tail   head  tail  
+ tail   head  tail   head  tail  
+ head  head  tail   head  tail  
+ tail   tail   head  head  tail  
+ head  tail   head  head  tail  
+ tail   head  head  head  tail  
+ head  head  head  head  tail  
+ tail   tail   tail   tail   head 
+ head  tail   tail   tail   head 
+ tail   head  tail   tail   head 
+ head  head  tail   tail   head 
+ tail   tail   head  tail   head 
+ head  tail   head  tail   head 
+ tail   head  head  tail   head 
+ head  head  head  tail   head 
+ tail   tail   tail   head  head 
+ head  tail   tail   head  head 
+ tail   head  tail   head  head 
+ head  head  tail   head  head 
+ tail   tail   head  head  head 
+ head  tail   head  head  head 
+ tail   head  head  head  head 
+ head  head  head  head  head 
+
+*/
