@@ -1,0 +1,26 @@
+package sorting_array;
+
+public class bubble_sort {
+
+	public static void main(String[] args) {
+		int [] arr = {50, 30, 10, 60, 5};
+		bubble_sort(arr);
+		display(arr);
+		}public static void bubble_sort(int[] arr) {
+			for(int i = 0; i<arr.length-1; i++) {
+				for(int count = 0;count<arr.length-1; count++) {
+					if(arr[count]>arr[count+1]) {
+						int temp = arr[count];
+						arr[count] = arr[count+1];
+						arr[count+1]= temp;
+					}
+				}
+			}
+		}public static void display(int[] arr) {
+			for(int val: arr) {
+				System.out.print(val+ " ");
+			}
+		}
+	
+	
+}
