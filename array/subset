@@ -1,0 +1,45 @@
+package array;
+
+public class subset {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [] arr = {10, 20, 30 };
+		subset(arr);
+
+	}public static void subset(int [] arr) {
+		int limit =(int)  Math.pow(2, arr.length); // we want till limit - 1
+	
+		for(int i = 0; i<limit;i++) {
+			int temp =i;
+			
+			for(int digit = 0; digit<arr.length; digit++) {
+				int rem = temp%2;
+				
+				if(rem == 1) {
+					System.out.print(arr[digit]+ " ");
+				}
+				
+				temp = temp/2;
+			}
+			
+			System.out.println();
+			
+			
+		}
+		
+	}
+
+}
+/*
+o/p
+
+10 
+20 
+10 20 
+30 
+10 30 
+20 30 
+10 20 30 
+
+*/
