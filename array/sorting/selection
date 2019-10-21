@@ -1,6 +1,6 @@
 package sorting_array;
 
-public class insertion {
+public class selection {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
