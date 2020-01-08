@@ -1,0 +1,607 @@
+package Codes_for_placement;
+
+public class lec2_all_patterns {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		pattern21(5);
+
+	}
+
+	public static void pattern0(int x) {
+		int n = 5;
+		int row = 1;
+		// rows n
+		while (row <= n) {
+			// work
+
+			System.out.print(" * ");
+			// preparation
+			System.out.println();
+			row = row + 1;
+		}
+	}
+
+	public static void pattern1(int x) {
+		int n = 5;
+		int row = 1;
+		int nst = n;
+		while (row <= n) {
+
+			int nsp = 1;
+			while (nsp <= nst) {
+				System.out.print("*");
+				nsp++;
+			}
+
+			System.out.println();
+			row++;
+		}
+
+	}
+
+	
+
+	public static void pattern6(int x) {
+		int n = 5;
+		int row = 1;
+		int nst = n;
+		int nsp = 0;
+		while (row <= n) {
+
+			// work
+			// space
+			int csp = 0;
+			while (csp < nsp) {
+				System.out.print(" ");
+				csp = csp + 1;
+
+			}
+
+			// star
+			int star = 1;
+			while (star <= nst) {
+				System.out.print("*");
+				star++;
+
+			}
+
+			nst = nst - 1;
+			nsp = nsp + 2;
+			System.out.println();
+
+			row++;
+		}
+
+	}
+	
+	public static void pattern7(int x) {
+		int n = 5;
+		int row = 1;
+		int nst = 1;
+		while (row <= n) {
+
+			int col = 1;
+			while (col <= n) {
+				if (row == 1 || col == 1 || row == n || col == n) {
+					System.out.print("*");
+
+				} else {
+					System.out.print(" ");
+				}
+
+				col++;
+
+			}
+
+			System.out.println();
+			row = row + 1;
+
+		}
+
+	}
+	
+	// valid only for odd even ke lie wont work
+	public static void pattern8(int x) {
+		int n = 11;
+		int row = 1;
+		while (row <= n) {
+
+			int col = 1;
+			while (col <= n) {
+				if (row == col || row + col == n + 1) {
+					System.out.print("*");
+				} else {
+					System.out.print(" ");
+				}
+
+				col++;
+			}
+
+			System.out.println();
+			row = row + 1;
+		}
+
+	}
+	
+	 
+	public static void pattern9(int x) {
+		int n = 10;
+		int row = 1;
+		int nst = 1;
+		int nsp = n - 1;
+		while (row <= n) {
+
+			// work
+			// space
+			int csp = 1;
+			while (csp <= nsp) {
+				System.out.print(" ");
+				csp = csp + 1;
+
+			}
+
+			// star
+			int star = 1;
+			while (star <= nst) {
+				System.out.print("*");
+
+				star = star + 1;
+			}
+
+			nst = nst + 2;
+			nsp = nsp - 1;
+			System.out.println();
+			row = row + 1;
+		}
+
+	}
+	
+	public static void pattern10(int x) {
+		int n = 5;
+		int row = 1;
+		int nst = 2 * n - 1;
+		int nsp = 0;
+		while (row <= n) {
+
+			// work
+			// space
+			int csp = 0;
+			while (csp < nsp) {
+				System.out.print(" ");
+				csp = csp + 1;
+			}
+
+			// star
+			int star = 0;
+			while (star < nst) {
+				System.out.print("*");
+				star = star + 1;
+			}
+
+			nsp = nsp + 1;
+			nst = nst - 2;
+			System.out.println();
+			row++;
+		}
+
+	}
+	
+	public static void pattern11(int x) {
+		int n = 5;
+		int row = 1;
+		int nst = 1;
+		int nsp = n - 1;
+		while (row <= n) {
+
+			// spaces
+			int csp = 1;
+			while (csp <= nsp) {
+				System.out.print("  ");
+
+				csp = csp + 1;
+			}
+
+			// star and !
+			int cst = 1;
+			while (cst <= nst) {
+				if (cst % 2 == 0) {
+					System.out.print(" ! ");
+				} else {
+					System.out.print(" * ");
+				}
+
+				cst = cst + 1;
+
+			}
+
+			nst = nst + 2;
+			nsp = nsp - 1;
+			System.out.println();
+			row = row + 1;
+		}
+
+	}
+
+	
+	public static void pattern12(int x) {
+		int n = 5;
+		int row = 1;
+		int nst = 1;
+
+		while (row <= 2 * n - 1) {
+			int cst = 1;
+			while (cst <= nst) {
+				System.out.print("*");
+
+				cst++;
+			}
+
+			if (row <= (2 * n - 1) / 2) {
+				nst++;
+
+			} else {
+				nst--;
+			}
+			System.out.println();
+			row++;
+		}
+
+	}
+
+	
+	public static void pattern13(int x) {
+		int n = 4;
+		int row = 1;
+		int nsp = n - 1;
+		int nst = 1;
+		while (row <= (2 * n - 1)) {
+
+			// spaces
+			int csp = 1;
+			while (csp <= nsp) {
+				System.out.print(" ");
+				csp++;
+			}
+
+			// star
+			int cst = 1;
+			while (cst <= nst) {
+				System.out.print("*");
+				cst = cst + 1;
+			}
+
+			if (row <= (2 * n - 1) / 2) {
+				nst = nst + 1;
+				nsp = nsp - 1;
+			} else {
+				nst = nst - 1;
+				nsp = nsp + 1;
+			}
+			System.out.println();
+			row = row + 1;
+		}
+
+	}
+
+	public static void pattern14(int x) {
+		int n = 5;
+		int row = 1;
+		int nsp = 0;
+		int nst = n;
+
+		while (row <= (2 * n - 1)) {
+
+			// space
+			int csp = 1;
+			while (csp <= nsp) {
+				System.out.print(" ");
+				csp = csp + 1;
+			}
+
+			// star
+
+			int cst = 1;
+			while (cst <= nst) {
+				System.out.print("*");
+				cst = cst + 1;
+			}
+
+			// prep
+			if (row <= (2 * n - 1) / 2) {
+				nst = nst - 1;
+				nsp = nsp + 2;
+			} else {
+				nst = nst + 1;
+				nsp = nsp - 2;
+			}
+			System.out.println();
+			row = row + 1;
+		}
+
+	}
+	
+	public static void pattern15(int x) {
+		int n = 7;
+		int row = 1;
+		int nst = n / 2;
+
+		int nsp = 1;
+		while (row <= n) {
+
+			// star
+			int cst = 1;
+			while (cst <= nst) {
+				System.out.print("*");
+				cst = cst + 1;
+			}
+
+			// space
+			int csp = 1;
+			while (csp <= nsp) {
+				System.out.print(" ");
+				csp = csp + 1;
+
+			}
+			// star
+			int cst2 = 1;
+			while (cst2 <= nst) {
+
+				System.out.print("*");
+
+				cst2 = cst2 + 1;
+			}
+
+			// prep
+			if (row <= n / 2) {
+				nst = nst - 1;
+				nsp = nsp + 2;
+
+			} else {
+				nst = nst + 1;
+				nsp = nsp - 2;
+			}
+
+			System.out.println();
+			row = row + 1;
+		}
+
+	}
+
+	
+	public static void pattern16(int x) {
+		int n = 5;
+		int row = 1;
+		int nst = 1;
+		int nsp = 2 * n - 3;
+
+		while (row <= n) {
+
+			// star
+			int cst = 1;
+			while (cst <= nst) {
+				System.out.print("*");
+
+				cst = cst + 1;
+
+			}
+
+			// space
+			int csp = 1;
+			while (csp <= nsp) {
+
+				System.out.print(" ");
+
+				csp = csp + 1;
+			}
+
+			// star
+			int cst2 = 1;
+			if (row == n) {
+				cst2 = 2;
+			}
+			while (cst2 <= nst) {
+				System.out.print("*");
+
+				cst2 = cst2 + 1;
+			}
+
+			// prep
+			nst = nst + 1;
+			nsp = nsp - 2;
+			System.out.println();
+
+			row = row + 1;
+		}
+
+	}
+
+	
+	public static void pattern17(int x) {
+		int n = 5;
+		int row = 1;
+		int nst = 1;
+		int nsp = n - 1;
+		while (row <= n) {
+
+			// space
+			int csp = 1;
+			while (csp <= nsp) {
+				System.out.print(" ");
+				csp = csp + 1;
+			}
+
+			// star
+
+			int cst = 1;
+			while (cst <= nst) {
+				System.out.print("1");
+
+				cst = cst + 1;
+			}
+
+			System.out.println();
+			nst = nst + 2;
+			nsp = nsp - 1;
+
+			row = row + 1;
+		}
+	}
+
+	
+	public static void pattern18(int x) {
+		int n = 5;
+		int row = 1;
+		int nst = 1;
+		int nsp = n - 1;
+		while (row <= n) {
+
+			// space
+			int csp = 1;
+			while (csp <= nsp) {
+				System.out.print(" ");
+				csp = csp + 1;
+			}
+
+			// star
+			int cst = 1;
+			while (cst <= nst) {
+				System.out.print(row);
+
+				cst = cst + 1;
+			}
+
+			System.out.println();
+			nsp = nsp - 1;
+			nst = cst + 2;
+			row = row + 1;
+
+		}
+
+	}
+
+	public static void pattern19(int x) {
+
+		int n = 5;
+		int row = 1;
+		int nst = 1;
+		int nsp = n - 1;
+		int val = 1;
+		
+		while (row <= n) {
+
+			// space
+			int csp = 1;
+			while (csp <= nsp) {
+				//int i = 1;
+
+				System.out.print(" ");
+
+				csp = csp + 1;
+			}
+			
+			// number
+			int cst = 1;
+			
+			while(cst<= nst) {
+				
+				System.out.print(val+" ");
+				cst = cst+1;
+				val ++;
+				
+			}
+			
+			System.out.println();
+			nst = nst +2;
+			nsp = nsp -1;
+		
+			row = row + 1;
+		}
+	}
+
+public static void pattern20(int x) {
+	int n = 5;
+	int row = 1;
+	int nsp = n-1;
+	int nst = 1;
+	//int val = 1;
+	while(row<= n) {
+		
+		// space
+		int csp = 1;
+		while(csp<= nsp) {
+			System.out.print(" ");
+			csp = csp+1;
+		}
+		
+		
+		// number
+		int cst = 1;
+		int i = 1;
+		while(cst<= nst) {
+			System.out.print(i);
+			i = i+1;
+			cst = cst +1;
+		}
+		
+		
+		
+		
+		nst = nst+2;
+		nsp = nsp-1;
+		System.out.println();
+
+		row = row+1;
+	}
+}
+	
+	public static void pattern21(int x){
+		int n = 5;
+		int row = 1;
+		int nsp = n-1;
+		int nst = 1;
+		
+		while(row<= n) {
+			
+			
+			// spaces
+			int csp = 1;
+			while(csp<= nsp) {
+				System.out.print(" ");
+				
+				
+				csp = csp+1;
+			}
+			
+			// number increase
+			int val = 1;
+			int cst = 1;
+			while(cst<= nst) {
+				
+				System.out.print(val);
+				
+				if(cst<=nst/2 ) {
+				val = val+1;
+				
+				}else {
+					val = val-1;
+					
+				}
+				cst = cst+1;
+			}
+			
+			
+			
+			
+			System.out.println();
+			nst = nst+2;
+			nsp = nsp-1;
+			
+			
+			row = row+1;
+		}
+		
+	}
+	
+	
+		}
